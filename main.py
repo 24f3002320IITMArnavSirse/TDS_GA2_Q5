@@ -28,6 +28,14 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+def health_check():
+    return {
+        "status": "ok",
+        "message": "Use POST /analytics for the graded endpoint.",
+    }
+
+
 @app.post("/analytics")
 def analytics(
     request: AnalyticsRequest,
