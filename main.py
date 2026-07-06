@@ -36,6 +36,7 @@ def health_check():
     }
 
 
+@app.post("/")
 @app.post("/analytics")
 def analytics(
     request: AnalyticsRequest,
